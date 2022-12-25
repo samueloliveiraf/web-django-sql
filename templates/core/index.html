@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block title %} Início {% endblock %}
+{% block main %}
+<div class="container">
+    <h1>Bem vindo!</h1>
+    <form action="{% url 'insert_table_game' %}" method="POST"> {% csrf_token %}
+        <div class="mb-3">
+            <div class="form-floating">
+                <textarea name="query" class="form-control" placeholder="Execute o insert aqui!" id="floatingTextarea2"
+                          style="height: 220px"></textarea>
+                <label for="floatingTextarea2">Execute o insert aqui!</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

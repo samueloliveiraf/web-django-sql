@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load bootstrap %}
+{% block title %} Cadastrar-se {% endblock %}
+{% block main %}
+<div class="container">
+    <div class="row">
+
+        <form class="col s12" method="POST"> {% csrf_token %} {{ form|bootstrap }}
+            <button class="btn" type="submit" name="action">
+                Cadastrar-se
+            </button>
+
+        </form>
+    </div>
+</div>
+<style>
+    span {
+        color: rgb(248, 46, 46)
+    }
+</style>
+{% endblock %}

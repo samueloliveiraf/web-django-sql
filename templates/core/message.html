@@ -1,0 +1,7 @@
+{% extends 'core/base.html' %}
+{% block title %} Mensagem {% endblock %}
+{% block main %}
+    {% if message %}
+      <h1>{{ message }}</h1>
+    {% endif %}
+{% endblock %}
